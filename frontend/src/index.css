@@ -1,0 +1,10 @@
+/*
+ * These are "Tailwind directives".
+ * They inject Tailwind's core styles (base), pre-built
+ * component styles (components), and all the utility
+ * classes (utilities) into your application's CSS.
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
