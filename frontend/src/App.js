@@ -8,9 +8,7 @@ import LandingPage from './components/LandingPage';
 import ChatWindow from './components/ChatWindow';
 
 function App() {
-  // --- STATE FOR COLLAPSIBLE SIDEBAR ---
-  // We add a state variable here, in the parent component.
-  // 'true' means the sidebar is open by default.
+  // State for managing the sidebar's open/closed status
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   return (
@@ -18,18 +16,16 @@ function App() {
     <div className="flex h-screen bg-white dark:bg-gray-900 text-black dark:text-white">
       
       {/* 1. SIDEBAR */}
-      {/* We pass the 'isSidebarOpen' state down to the
-          Sidebar component as a "prop". */}
+      {/* Pass the state down to the Sidebar component as a prop */}
       <Sidebar isOpen={isSidebarOpen} />
       
       {/* 2. MAIN CONTENT AREA (Wrapper) */}
-      {/* We add 'relative' here so we can position
-          the collapse button absolutely inside it. */}
+      {/* 'relative' allows absolute positioning of the toggle button */}
       <div className="flex-1 flex flex-col relative">
       
         {/* --- SIDEBAR TOGGLE BUTTON --- */}
         <button 
-          onClick={() => setIsSidebarOpen(!isSidebarOpen)} // This flips the state
+          onClick={() => setIsSidebarOpen(!isSidebarOpen)} // Flips the sidebar state
           className="
             absolute top-1/2 -left-3 z-10 
             transform -translate-y-1/2
@@ -42,7 +38,7 @@ function App() {
           "
           aria-label="Toggle sidebar"
         >
-          {/* This SVG icon will rotate 180 degrees */}
+          {/* SVG icon rotates based on sidebar state */}
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
             fill="none" 
@@ -64,7 +60,7 @@ function App() {
           <ThemeToggle />
         </header>
         
-        {/* 2b. Page Content */}
+        {/* 2b. Page Content (routed) */}
         <main className="flex-1 overflow-y-auto">
           <Routes>
             <Route path="/" element={<LandingPage />} />
