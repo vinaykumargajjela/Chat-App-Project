@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 // This is the URL of our running backend server.
-const API_URL = 'http://localhost:5001';
+const API_URL = process.env.REACT_APP_API_URL;
 
 // We receive the 'isOpen' prop from our parent (App.js)
 const Sidebar = ({ isOpen }) => {
