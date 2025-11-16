@@ -16,7 +16,6 @@ It's always best to add a screenshot or a quick GIF of your app in action!
 <img width="1902" height="895" alt="image" src="https://github.com/user-attachments/assets/10ade1da-cd95-4f27-bf09-16416e0d774a" />
 
 
-(Note: Replace the link above with a URL to an image or GIF of your project.)
 
 # ✨ Key Features
 Mock Chat Interface: A clean UI for sending and receiving messages.
